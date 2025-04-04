@@ -1,0 +1,52 @@
+[
+    {
+        "nome": "SAMPAGODE",
+        "vitorias": 5,
+        "empates": 0,
+        "derrotas": 0,
+        "gp": 26,
+        "gc": 6,
+        "sg": 20,
+        "logo": "imagens/sampagode.png"
+    },
+    {
+        "nome": "ESCOLHIDOS",
+        "vitorias": 4,
+        "empates": 0,
+        "derrotas": 1,
+        "gp": 27,
+        "gc": 7,
+        "sg": 20,
+        "logo": "imagens/escolhidos.png"
+    },
+    {
+        "nome": "MX Potes",
+        "vitorias": 3,
+        "empates": 0,
+        "derrotas": 2,
+        "gp": 28,
+        "gc": 21,
+        "sg": 7,
+        "logo": "imagens/mxpotes.png"
+    },
+    {
+        "nome": "Canela",
+        "vitorias": 1,
+        "empates": 0,
+        "derrotas": 4,
+        "gp": 12,
+        "gc": 17,
+        "sg": -5,
+        "logo": "imagens/canela.png"
+    },
+    {
+        "nome": "Werder Brahma",
+        "vitorias": 0,
+        "empates": 0,
+        "derrotas": 5,
+        "gp": 5,
+        "gc": 42,
+        "sg": -37,
+        "logo": "imagens/werderbrahma.png"
+    }
+]

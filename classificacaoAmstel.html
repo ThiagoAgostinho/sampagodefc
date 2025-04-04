@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação Amstel D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Classificação Amstel D</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+            <li><a href="artilharia.html">Artilharia</a></li>
+            <li><a href="jogadores.html">Jogadores</a></li>
+            <li><a href="mvps.html">Mvp's</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Tabela de Classificação</h2>
+    <table id="tabela-classificacao">
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Time</th>
+                <th>Pontos</th>
+                <th>Vitórias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Gols Pró</th>
+                <th>Gols Contra</th>
+                <th>Saldo de gols</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<footer>
+    <p>&copy; 2025 SAMPAGODE FC. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+fetch("classificacaoAmstel.json")
+    .then(res => res.json())
+    .then(data => {
+        // Calcula pontos e saldo de gols dinamicamente
+        data.forEach(time => {
+            time.pontos = (time.vitorias * 3) + (time.empates * 1);
+            time.sg = time.gp - time.gc;
+        });
+
+        // Ordena a classificação pelos pontos, depois pelo saldo de gols
+        data.sort((a, b) => b.pontos - a.pontos || b.sg - a.sg);
+
+        const tbody = document.querySelector("#tabela-classificacao tbody");
+        data.forEach((time, index) => {
+            const row = `
+                <tr>
+                    <td>${index + 1}º</td>
+                    <td>
+                        <div class="time-container">
+                            <img src="${time.logo}" alt="${time.nome}" class="team-logo">
+                            <span>${time.nome}</span>
+                        </div>
+                    </td>
+                    <td>${time.pontos}</td>
+                    <td>${time.vitorias}</td>
+                    <td>${time.empates}</td>
+                    <td>${time.derrotas}</td>
+                    <td>${time.gp}</td>
+                    <td>${time.gc}</td>
+                    <td>${time.sg}</td>
+                </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+    });
+</script>
+
+</body>
+</html>

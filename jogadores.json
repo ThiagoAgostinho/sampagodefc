@@ -1,0 +1,22 @@
+[
+    { "nome": "Brunao", "posicao": "Atacante", "imagem": "brunao.png" },
+    { "nome": "Barga", "posicao": "Zagueiro", "imagem": "barga.png" },
+    { "nome": "Mazza", "posicao": "Ala", "imagem": "mazza.png" },
+    { "nome": "Meneis", "posicao": "Volante", "imagem": "meneis.png" },
+    { "nome": "Vini Rocha", "posicao": "Zagueiro", "imagem": "vinirocha.png" },
+    { "nome": "Luca", "posicao": "Ala", "imagem": "luca.png" },
+    { "nome": "Valim", "posicao": "Zagueiro", "imagem": "valim.png" },
+    { "nome": "Gut", "posicao": "Ala", "imagem": "gut.png" },
+    { "nome": "Lorenzo", "posicao": "Volante", "imagem": "lorenzo.png" },
+    { "nome": "Porto", "posicao": "Volante", "imagem": "porto.png" },
+    { "nome": "Vitao", "posicao": "Zagueiro", "imagem": "vitao.png" },
+    { "nome": "Leo", "posicao": "Ala", "imagem": "leo.png" },
+    { "nome": "Rodrigo", "posicao": "Zagueiro", "imagem": "rodrigo.png" },
+    { "nome": "Ronald", "posicao": "Zagueiro", "imagem": "ronald.png" },
+    { "nome": "Silvares", "posicao": "Ala", "imagem": "silvares.png" },
+    { "nome": "Gui", "posicao": "Zagueiro", "imagem": "gui.png" },
+    { "nome": "Liro", "posicao": "Volante", "imagem": "liro.png" },
+    { "nome": "Kinhas", "posicao": "Zagueiro", "imagem": "kinhas.png" },
+    { "nome": "Thigaz", "posicao": "Goleiro", "imagem": "thigaz.png" },
+    { "nome": "Lota", "posicao": "Goleiro", "imagem": "lota.png" }
+]

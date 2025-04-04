@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores - SAMPAGODE FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>SAMPAGODE FC - Elenco</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+            <li><a href="classificacaoAmstel.html">Classificação</a></li>
+            <li><a href="artilharia.html">Artilharia</a></li>
+            <li><a href="mvps.html">Mvp's</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Elenco do SAMPAGODE FC</h2>
+
+    <div class="elenco-container">
+        <div class="coluna" id="goleiros">
+            <h3 class="titulo">Goleiros</h3>
+        </div>
+        <div class="coluna" id="zagueiros">
+            <h3 class="titulo">Zagueiros</h3>
+        </div>
+        <div class="coluna" id="volantes">
+            <h3 class="titulo">Volantes</h3>
+        </div>
+        <div class="coluna" id="alas">
+            <h3 class="titulo">Alas</h3>
+        </div>
+        <div class="coluna" id="atacantes">
+            <h3 class="titulo">Atacantes</h3>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 SAMPAGODE FC. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    fetch("jogadores.json")
+        .then(response => response.json())
+        .then(data => {
+            const posicoes = {
+                "Goleiro": document.getElementById("goleiros"),
+                "Zagueiro": document.getElementById("zagueiros"),
+                "Volante": document.getElementById("volantes"),
+                "Ala": document.getElementById("alas"),
+                "Atacante": document.getElementById("atacantes")
+            };
+
+            data.forEach(jogador => {
+                let posicao = jogador.posicao;
+                if (posicao.includes("/")) {
+                    posicao = posicao.split("/")[0]; // Pega a primeira posição se houver duas
+                }
+
+                if (posicoes[posicao]) {
+                    posicoes[posicao].innerHTML += `
+                        <div class="jogador">
+                            <img src="imagens/${jogador.imagem}" alt="${jogador.nome}">
+                            <p>${jogador.nome}</p>
+                        </div>
+                    `;
+                }
+            });
+        })
+        .catch(error => console.error("Erro ao carregar os jogadores:", error));
+</script>
+
+</body>
+</html>

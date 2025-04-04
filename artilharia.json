@@ -1,0 +1,21 @@
+[
+    { "nome": "Brunao", "gols": 9, "imagem": "brunao.png" },
+    { "nome": "Barga", "gols": 5, "imagem": "barga.png" },
+    { "nome": "Mazza", "gols": 4, "imagem": "mazza.png" },
+    { "nome": "Meneis", "gols": 4, "imagem": "meneis.png" },
+    { "nome": "Vini Rocha", "gols": 4, "imagem": "vinirocha.png" },
+    { "nome": "Luca", "gols": 3, "imagem": "luca.png" },
+    { "nome": "Valim", "gols": 3, "imagem": "valim.png" },
+    { "nome": "Gut", "gols": 1, "imagem": "gut.png" },
+    { "nome": "Lorenzo", "gols": 1, "imagem": "lorenzo.png" },
+    { "nome": "Porto", "gols": 1, "imagem": "porto.png" },
+    { "nome": "Vitao", "gols": 1, "imagem": "vitao.png" },
+    { "nome": "Leo", "gols": 1, "imagem": "leo.png" },
+    { "nome": "Rodrigo", "gols": 0, "imagem": "rodrigo.png" },
+    { "nome": "Ronald", "gols": 0, "imagem": "ronald.png" },
+    { "nome": "Silvares", "gols": 0, "imagem": "silvares.png" },
+    { "nome": "Gui", "gols": 0, "imagem": "gui.png" },
+    { "nome": "Liro", "gols": 0, "imagem": "liro.png" },
+    { "nome": "Kinhas", "gols": 0, "imagem": "kinhas.png" }
+  ]
+  

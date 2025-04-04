@@ -1,0 +1,230 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #1c1c1c; /* Cinza escuro */
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    max-height: 400px; /* Reduz a altura máxima */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+    border-radius: 10px;
+}
+
+/* Botões */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.botao {
+    display: block;
+    width: 250px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #0044cc; /* Azul padrão do time */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #002a80; /* Azul escuro */
+    transform: scale(1.05);
+}
+
+/* Container geral */
+.container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2a2a2a; /* Cinza mais claro */
+    border-radius: 10px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #1c1c1c; /* Cinza escuro */
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #0044cc; /* Azul do time */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a; /* Cinza intermediário */
+}
+
+/* Estilização de imagens (times e jogadores) */
+.team-logo, .player-photo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* Estilização do elenco */
+.elenco-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Colunas (Goleiros, Zagueiros, etc.) */
+.coluna {
+    background: #1c1c1c;
+    width: 18%; /* Controla a largura para manter em linha */
+    min-width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+
+/* Títulos das posições */
+.titulo {
+    background-color: #6a0dad; /* Roxo */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilização dos jogadores */
+.jogador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogador img {
+    width: auto;
+    height: auto;
+    max-width: 120px;  /* Define um limite sem forçar reescalonamento */
+    max-height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    image-rendering: crisp-edges; /* Melhora a renderização em alguns navegadores */
+}
+
+
+.jogador p {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Botão de navegação */
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #0044cc;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #002a80;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column; /* Coloca imagem e nome em coluna */
+    align-items: center; /* Centraliza o nome e a imagem */
+    text-align: center;
+}
+
+.player-photo {
+    width: 80px;  /* Ajuste o tamanho da imagem */
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 5px; /* Espaço entre a imagem e o nome */
+}
+
+.player-info span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-container span {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+#tabela-proximos-jogos .time-container span,
+#tabela-jogos-anteriores .time-container span {
+    font-size: 12px;
+}
+
+.jogos {
+    opacity: 1;
+    color: black; /* Se estiver invisível por falta de contraste */
+}

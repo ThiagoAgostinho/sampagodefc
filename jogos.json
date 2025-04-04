@@ -1,0 +1,74 @@
+[
+  {
+    "data": "2025-01-25",
+    "competicao": "Festival",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "4 - 0",
+    "timeB": "SANS FC",
+    "imgB": "imagens/sans.png"
+  },
+  {
+    "data": "2025-02-02",
+    "competicao": "Amistoso",
+    "timeA": "",
+    "imgA": "imagens/timec.png",
+    "placar": "8 - 5",
+    "timeB": "ASTRA",
+    "imgB": "imagens/astra.png"
+  },
+  {
+    "data": "2025-02-22",
+    "competicao": "AMSTEL SERIE D",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "5 - 1",
+    "timeB": "CANELA",
+    "imgB": "imagens/canela.png"
+  },
+  {
+    "data": "2025-03-08",
+    "competicao": "AMSTEL SERIE D",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "6 - 4",
+    "timeB": "MX POTES",
+    "imgB": "imagens/mxpotes.png"
+  },
+  {
+    "data": "2025-03-15",
+    "competicao": "AMSTEL SERIE D",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "2 - 1",
+    "timeB": "ESCOLHIDOS",
+    "imgB": "imagens/escolhidos.png"
+  },
+  {
+    "data": "2025-02-22",
+    "competicao": "AMSTEL SERIE D",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "6 - 0",
+    "timeB": "PEC",
+    "imgB": "imagens/mxpotes.png"
+  },
+  {
+    "data": "2025-02-22",
+    "competicao": "AMSTEL SERIE D",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "6 - 0",
+    "timeB": "WERDER BRAHMA",
+    "imgB": "imagens/mxpotes.png"
+  },
+  {
+    "data": "2025-04-12",
+    "competicao": "AMSTEL SERIE D",
+    "timeA": "",
+    "imgA": "imagens/sampagode.png",
+    "placar": "5 - 1",
+    "timeB": "Indefinido",
+    "imgB": "imagens/mxpotes.png"
+  }
+]

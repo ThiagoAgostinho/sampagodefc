@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos - SAMPAGODE FC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>SAMPAGODE FC - Jogos</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="classificacaoAmstel.html">Classificação</a></li>
+            <li><a href="artilharia.html">Artilharia</a></li>
+            <li><a href="jogadores.html">Jogadores</a></li>
+            <li><a href="mvps.html">Mvp's</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Próximos Jogos</h2>
+    <table id="tabela-proximos-jogos">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Competição</th>
+                <th>Sampagode</th>
+                <th>Placar</th>
+                <th>Adversário</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h2>Jogos Anteriores</h2>
+    <table id="tabela-jogos-anteriores">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Competição</th>
+                <th>Sampagode</th>
+                <th>Placar</th>
+                <th>Adversário</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<footer>
+    <p>&copy; 2025 SAMPAGODE FC. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function formatarDataBrasileira(dataISO) {
+        const data = new Date(dataISO + 'T00:00:00-03:00');
+        const dia = String(data.getDate()).padStart(2, '0');
+        const mes = String(data.getMonth() + 1).padStart(2, '0');
+        const ano = data.getFullYear();
+        return `${dia}/${mes}/${ano}`;
+    }
+
+    fetch("jogos.json")
+        .then(res => res.json())
+        .then(data => {
+            const tbodyProximos = document.querySelector("#tabela-proximos-jogos tbody");
+            const tbodyAnteriores = document.querySelector("#tabela-jogos-anteriores tbody");
+            const hoje = new Date();
+
+            data.forEach(jogo => {
+                const dataJogo = new Date(jogo.data);
+                const row = `
+                    <tr>
+                        <td>${formatarDataBrasileira(jogo.data)}</td>
+                        <td>${jogo.competicao}</td>
+                        <td>
+                            <div class="time-container">
+                                <img src="${jogo.imgA}" alt="${jogo.timeA}" class="team-logo">
+                                <span>${jogo.timeA}</span>
+                            </div>
+                        </td>
+                        <td>${jogo.placar}</td>
+                        <td>
+                            <div class="time-container">
+                                <img src="${jogo.imgB}" alt="${jogo.timeB}" class="team-logo">
+                                <span>${jogo.timeB}</span>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+
+                if (dataJogo >= hoje) {
+                    tbodyProximos.innerHTML += row;
+                } else {
+                    tbodyAnteriores.innerHTML += row;
+                }
+            });
+        });
+</script>
+
+</body>
+</html>

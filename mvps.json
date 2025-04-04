@@ -1,0 +1,103 @@
+[
+    {
+      "nome": "Brunao",
+      "imagem": "brunao.png",
+      "jogos": ["vs MX Potes","vs Werder Brahma"]
+    },
+    {
+      "nome": "Barga",
+      "imagem": "barga.png",
+      "jogos": ["vs Sans FC"]
+    },
+    {
+      "nome": "Mazza",
+      "imagem": "mazza.png",
+      "jogos": ["vs Canela"]
+    },
+    {
+      "nome": "Meneis",
+      "imagem": "meneis.png",
+      "jogos": []
+    },
+    {
+      "nome": "Vini Rocha",
+      "imagem": "vinirocha.png",
+      "jogos": ["PEC"]
+    },
+    {
+      "nome": "Luca",
+      "imagem": "luca.png",
+      "jogos": ["vs Escolhidos"]
+    },
+    {
+      "nome": "Valim",
+      "imagem": "valim.png",
+      "jogos": ["vs Astra"]
+    },
+    {
+      "nome": "Gut",
+      "imagem": "gut.png",
+      "jogos": []
+    },
+    {
+      "nome": "Lorenzo",
+      "imagem": "lorenzo.png",
+      "jogos": []
+    },
+    {
+      "nome": "Porto",
+      "imagem": "porto.png",
+      "jogos": []
+    },
+    {
+      "nome": "Vitao",
+      "imagem": "vitao.png",
+      "jogos": []
+    },
+    {
+      "nome": "Leo",
+      "imagem": "leo.png",
+      "jogos": []
+    },
+    {
+      "nome": "Rodrigo",
+      "imagem": "rodrigo.png",
+      "jogos": []
+    },
+    {
+      "nome": "Ronald",
+      "imagem": "ronald.png",
+      "jogos": []
+    },
+    {
+      "nome": "Silvares",
+      "imagem": "silvares.png",
+      "jogos": []
+    },
+    {
+      "nome": "Gui",
+      "imagem": "gui.png",
+      "jogos": []
+    },
+    {
+      "nome": "Liro",
+      "imagem": "liro.png",
+      "jogos": []
+    },
+    {
+      "nome": "Kinhas",
+      "imagem": "kinhas.png",
+      "jogos": []
+    },
+    {
+      "nome": "Thigaz",
+      "imagem": "thigaz.png",
+      "jogos": []  
+    },
+    {
+      "nome": "Lota",
+      "imagem": "lota.png",
+      "jogos": [] 
+    }
+  ]
+  

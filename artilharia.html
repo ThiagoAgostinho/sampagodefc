@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artilharia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Artilharia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="jogos.html">Jogos</a></li>
+                <li><a href="classificacaoAmstel.html">Artilharia</a></li>
+                <li><a href="jogadores.html">Jogadores</a></li>
+                <li><a href="mvps.html">Mvps's</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+        <table id="tabela-artilharia">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Jogador</th>
+                    <th>Gols</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        fetch('artilharia.json')
+    .then(response => response.json())
+    .then(data => {
+        data.sort((a, b) => b.gols - a.gols);
+        const tabela = document.querySelector("#tabela-artilharia tbody");
+        
+        data.forEach((jogador, index) => {
+            const linha = document.createElement("tr");
+            linha.innerHTML = `
+                <td>${index + 1}º</td>
+                <td class="player-info">
+                    <div class="player-container">
+                        <img src="imagens/${jogador.imagem}" alt="${jogador.nome}" class="player-photo">
+                        <span>${jogador.nome}</span>
+                    </div>
+                </td>
+                <td>${jogador.gols}</td>
+            `;
+            tabela.appendChild(linha);
+        });
+    })
+    .catch(error => console.error("Erro ao carregar artilharia:", error));
+
+    </script>
+</body>
+</html>

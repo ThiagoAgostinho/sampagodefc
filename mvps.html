@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MVPs - SAMPAGODE FC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mvp.css">
+</head>
+<body>
+  <header>
+    <h1>SAMPAGODE FC - MVPs</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="classificacaoAmstel.html">Classificação</a></li>
+        <li><a href="artilharia.html">Artilharia</a></li>
+        <li><a href="jogadores.html">Jogadores</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="mvp-container" id="mvp-list"></div>
+  </div>
+
+  <footer>
+    <p style="text-align: center;">&copy; 2025 SAMPAGODE FC. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    fetch('mvps.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('mvp-list');
+
+        // Adiciona contagem de MVPs
+        data.forEach(jogador => {
+          jogador.mvpCount = jogador.jogos.length;
+        });
+
+        // Ordena por quantidade de MVPs (descendente)
+        data.sort((a, b) => b.mvpCount - a.mvpCount);
+
+        // Cria o HTML
+        data.forEach(jogador => {
+          const card = document.createElement('div');
+          card.classList.add('mvp-card');
+
+          card.innerHTML = `
+            <img src="imagens/${jogador.imagem}" alt="${jogador.nome}">
+            <h3>${jogador.nome}</h3>
+            <p><strong>${jogador.mvpCount} MVP(s)</strong></p>
+            ${jogador.jogos.length > 0
+              ? `<ul>${jogador.jogos.map(jogo => `<li>${jogo}</li>`).join('')}</ul>`
+              : `<p>Sem MVPs ainda</p>`}
+          `;
+
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
